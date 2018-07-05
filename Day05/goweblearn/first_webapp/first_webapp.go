@@ -5,11 +5,9 @@ import (
 	"fmt"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello %s!", r.URL.Path[1:])
-}
-
 func main() {
-	http.HandleFunc("/", handler)
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "hello web server")
+	})
 	http.ListenAndServe(":8000", nil)
 }
