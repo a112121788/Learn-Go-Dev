@@ -7,7 +7,6 @@ Learn-Go-Dev
 
 ## Day02
 - Go 语言基础
-- 核心函数
 
 ## Day03
 - 标准库
